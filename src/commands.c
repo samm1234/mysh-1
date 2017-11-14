@@ -67,7 +67,7 @@ int evaluate_command(int n_commands, struct single_command (*commands)[512])
 		int pid;
 		pid=fork();
 		
-		if(pid==0)//child
+		if(pid==0)//child process
 		{	
 			//path resolution
 			char*temp=com->argv[0];//temp==original command
@@ -89,7 +89,7 @@ int evaluate_command(int n_commands, struct single_command (*commands)[512])
 		{
 			fprintf(stderr,"fork fail\n");		
 		}
-		else if(pid>0){ //parent
+		else if(pid>0){ //parent process
 		//wait(&pid);
 		}
 	}}
